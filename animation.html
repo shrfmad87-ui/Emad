@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Guides&display=swap" rel="stylesheet">
+    <style>
+        nav{
+            columns: 100px 4;
+            border: 2px solid black;
+            margin-bottom: 30px;
+            background-color: gray;
+            border-bottom-color:red ;
+        }
+        button{
+            width: 100px;
+            border-radius: 5px;
+            background-color: red;
+        }
+        #col2{
+            columns: 200px 2;
+            margin-left: 200px;
+        }
+        #col4{
+            columns: 200px 4;
+        }
+        .card{
+            width: 200px;
+            height: 200px;
+            border : 2px solid black;
+            border-radius: 20px;
+            margin-bottom: 100px;
+            background-color: rgb(89, 78, 248);
+            box-shadow: 5px 5px 5px 0px gray;
+        }
+        .circle:hover{
+            width : 150px;
+            transform: rotate(36deg);
+        }
+        .circle{
+            margin-top: 20px;
+            margin-left: 20px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: brown;
+            transition: width 2s;
+        }
+        @keyframes anemation{
+            0%{background-color: aliceblue;}
+            25%{background-color: rgb(142, 194, 239);}
+            50%{background-color: rgb(77, 157, 227);}
+            75%{background-color: rgb(89, 78, 248);}
+        }
+        .card:hover {
+            transform: scale(1.25) rotate(15deg);
+            box-shadow: 10px 10px 15px 0px gray; 
+            animation-name: anemation;
+            animation-duration: 5s;
+        }
+        #cf{
+            font-family: "Playwrite NZ Guides", cursive;
+        }
+        #lastnews{
+            column-count: 2;
+        }
+    </style>
+</head>
+<body>
+    <nav><p>Home</p> <p>Setting</p> <p>Contact</p> <p>About</p></nav>
+    <section><h3>Lorem</h3>
+        <p id="cf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, corporis.</p>
+        <button>Button</button>
+    </section>
+    <br><br>
+    <div id="col2">
+    <div class="card">
+        <div class="circle">
+
+        </div>
+        <p>Card</p>
+    </div>
+    <div class="card">
+        <div class="circle">
+            
+        </div>
+        <p>Card</p>
+    </div>
+    </div>
+    <div id="col4">
+        <div class="card">
+        <div class="circle">
+            
+        </div>
+        <p>Card</p>
+        </div>
+        <div class="card">
+        <div class="circle">
+            
+        </div>
+        <p>Card</p>
+        </div>
+        <div class="card">
+        <div class="circle">
+            
+        </div>
+        <p>Card</p>
+        </div>
+        <div class="card">
+        <div class="circle">
+            
+        </div>
+        <p>Card</p>
+        </div>
+    </div>
+    <br><br>
+    <div >
+        <p id="lastnews">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, atque. Blanditiis tempore esse minima aperiam veniam, quaerat eligendi optio numquam officia architecto consectetur, praesentium debitis corrupti, veritatis tempora atque recusandae!</p>
+    </div>
+</body>
+</html>
