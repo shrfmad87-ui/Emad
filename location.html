@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Show Your Location</h1>
+    <button onclick="showlocation()" width="150px">Show</button>
+    <div id="loc"></div>
+    <button onclick="onMaps()">Go To Google Maps</button>
+    <script>
+        let Latitude;
+        let Longitude;
+        div = document.getElementById("loc")
+        function showlocation(){
+            navigator.geolocation.getCurrentPosition(success,fail)
+            div.innerHTML = "Serching....."
+        }
+        function success(p){
+            Latitude=p.coords.latitude;
+            Longitude=p.coords.longitude;
+            div.innerHTML = `Latitude : ${Latitude}<br>
+                            Longitude : ${Longitude}`
+        }
+        function fail(){
+            alert("Sorry,We Cannot Acess Your Location")
+        }
+        function onMaps(){
+            url = "https://www.google.com/maps/@" + Latitude + "," + Longitude + ",16z?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D"
+            window.open(url)
+        }
+
+    </script>
+</body>
+</html>

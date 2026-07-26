@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="color" id="color">
+    <button onclick="drow()">Drow</button>
+    <canvas id="can" width="1500px" height="500px"></canvas>
+    <script>
+        ctx = document.getElementById("can").getContext("2d");
+        color = document.getElementById("color");
+        function drow(){
+            ctx.beginPath();
+            ctx.strokeStyle = color.value
+            ctx.lineWidth = 2;
+            ctx.arc(Math.random()*1500,Math.random()*500,20,0,2*Math.PI,true);
+            ctx.stroke()
+        }
+    </script>
+</body>
+</html>
